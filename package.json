@@ -11,7 +11,8 @@
     "gh-deploy": "git add . && git ci -m 'Deploy to gh' && git push && git subtree push --prefix dist origin gh-pages",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest"
   },
   "author": "",
   "license": "ISC",
@@ -21,10 +22,14 @@
     "reset-css": "^5.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
     "@prettier/sync": "^0.3.0",
     "@stylistic/eslint-plugin": "^1.5.3",
     "@tsconfig/node20": "^20.1.4",
+    "@types/jest": "^29.5.14",
     "@types/webpack-env": "^1.18.4",
+    "babel-jest": "^29.7.0",
     "css-loader": "^6.8.1",
     "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -32,9 +37,11 @@
     "eslint-plugin-autofix": "^1.1.0",
     "eslint-plugin-import": "^2.29.1",
     "html-webpack-plugin": "^5.6.0",
+    "jest": "^29.7.0",
     "prettier": "^3.1.1",
     "prettier-plugin-brace-style": "^0.4.1",
     "style-loader": "^3.3.3",
+    "ts-jest": "^29.2.5",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
