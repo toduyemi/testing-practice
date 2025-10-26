@@ -2,7 +2,7 @@ import { caesarCipher } from './caesarCipher';
 
 describe('caesarCipher', () => {
   test('wrapping', () => {
-    const str = 'Hello, World!';
+    const str = 'xyz';
     const expected = 'abc';
     expect(caesarCipher(str, 3)).toBe(expected);
   });
@@ -13,7 +13,7 @@ describe('caesarCipher', () => {
   });
   test('punctuation', () => {
     const str = 'Hello, World!';
-    const expected = 'Khoor, Zruog1';
+    const expected = 'Khoor, Zruog!';
     expect(caesarCipher(str, 3)).toBe(expected);
   });
 });
